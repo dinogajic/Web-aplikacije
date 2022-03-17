@@ -1,4 +1,4 @@
-# WebApps
+# Web aplikacije
 
 Dino Gajić
 

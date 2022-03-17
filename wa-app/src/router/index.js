@@ -16,7 +16,7 @@ const routes = [{
   path: "/:sha",
   name: "Details",
   component: () => import('../views/Details.vue'),
-
+  props: true
 }
 
 ]

@@ -6,9 +6,11 @@
       </tr>
       <tr v-for="card in cards" :key="card.id">
         <td>
-          <router-link :to="{ name: 'Details', parms }">{{
-            card.Sha
-          }}</router-link>
+          <router-link
+            class="button"
+            :to="{ name: 'Details', params: { sha: card.Sha } }"
+            >{{ card.Sha }}</router-link
+          >
         </td>
       </tr>
     </table>
@@ -16,37 +18,11 @@
 </template>
 
 <script>
-import Detalji from "@/components/Detalji.vue";
-
 export default {
   name: "Home",
+  props: ["cards"],
   data: function () {
-    return {
-      cards: [],
-    };
-  },
-  mounted() {
-    this.getData();
-  },
-  methods: {
-    getData() {
-      this.$http
-        .get("https://api.github.com/repos/vuejs/vue/commits")
-        .then((response) => {
-          response.data.forEach((commits) => {
-            this.cards.push({
-              Sha: commits.sha,
-              Name: commits.commit.author.name,
-              Email: commits.commit.author.email,
-              Message: commits.commit.message,
-              Date: commits.commit.author.date,
-            });
-          });
-        });
-    },
-  },
-  components: {
-    Detalji,
+    return {};
   },
 };
 </script>
@@ -68,6 +44,5 @@ td {
 .button:hover {
   color: red;
   cursor: pointer;
-  background-color: aqua;
 }
 </style>

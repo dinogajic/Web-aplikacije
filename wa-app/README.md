@@ -1,4 +1,4 @@
-# wa-app
+# wa-zadatak
 
 ## Project setup
 ```

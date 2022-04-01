@@ -1,4 +1,4 @@
-# wa-zadatak
+# wa-blic-01
 
 Dino Gajić
 

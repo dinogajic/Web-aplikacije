@@ -1,19 +1,7 @@
-# wa-blic-01
+# wa-zadatak
 
-## Project setup
-```
-npm install
-```
+Dino Gajić
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+0303092395
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Web Aplikacije

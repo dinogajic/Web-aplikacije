@@ -1,18 +1,34 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="home">
+    <table>
+      <tr>
+        <th></th>
+      </tr>
+      <tr v-for="knji in knjiga" :key="knji.id">
+        <td>{{ knji.name }}</td>
+        <td>{{ knji.authors[0] }}</td>
+        <td>{{ knji.released }}</td>
+        <td>
+          <router-link
+            class="button"
+            :to="{ name: 'Details', params: { url: knji.url } }"
+            >{{ knji.url }}
+          </router-link>
+        </td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Home",
+  props: ["knjiga"],
+  data: function () {
+    return {};
+  },
+};
 </script>
+
+<style>
+</style>

@@ -31,13 +31,7 @@
       <tr>
         <strong>Broj likova:</strong>
         {{
-          Data.characters.length
-        }}
-      </tr>
-      <tr>
-        <strong>Broj likova:</strong>
-        {{
-          Data.country
+          Data.characters
         }}
       </tr>
       <tr>

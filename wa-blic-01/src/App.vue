@@ -30,7 +30,7 @@ export default {
               publisher: books.publisher,
               country: books.country,
               released: books.released,
-              characters: books.characters,
+              characters: books.characters.length,
             });
           });
         });
